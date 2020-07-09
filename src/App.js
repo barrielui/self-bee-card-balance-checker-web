@@ -33,7 +33,7 @@ class App extends React.Component {
        <form action="https://beecard.co.nz/Home/Balance" onChange={this.handleChange}method="post" autoComplete="on">
         <div className="Card-form">
           <div className="Input-boxes">
-            <input 
+            <input onChange={this.handleChange}
               className="Printed-number" 
               type="text" 
               inputMode="numeric" 
@@ -46,7 +46,7 @@ class App extends React.Component {
               required
             />
               
-            <input 
+            <input onChange={this.handleChange}
               className="Security-code" 
               type="password" 
               inputMode="numeric" 
