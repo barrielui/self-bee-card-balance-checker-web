@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/barrielui/self-bee-card-balance-checker-web.svg?branch=master)](https://travis-ci.com/barrielui/self-bee-card-balance-checker-web)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](https://github.com/barrielui/self-bee-card-balance-checker-web/blob/master/LICENSE)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
