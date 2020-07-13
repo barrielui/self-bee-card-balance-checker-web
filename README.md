@@ -1,6 +1,19 @@
 [![Build Status](https://travis-ci.com/barrielui/self-bee-card-balance-checker-web.svg?branch=master)](https://travis-ci.com/barrielui/self-bee-card-balance-checker-web)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](https://github.com/barrielui/self-bee-card-balance-checker-web/blob/master/LICENSE)
 
+# Bee Card Balance Checker
+
+The website is hosted live [here](https://bee-card-balance-checker-web.herokuapp.com/).  It is a on-demand server, so it takes time to load on first access (around 10s).
+
+A basic website to check the balance of the newly introduced [Bee Card](https://beecard.co.nz/)
+
+The same functionality is placed at a lower part of the official website. Since the official implementation is a bit difficult to access, especially from a smartphone, I tried to develop a dedicated website to perform the query. As balance checking is implemented by a post request without complex authentication nor reCAPTCHA, I consider card balance checking not a significant credential, so a third party attempt to check card balance is roughly equivalent. There is no intention to breach any security issue. 
+
+Data is not processed on the server of this website, nor is transferred to the server. 
+
+
+## React Instruction
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
