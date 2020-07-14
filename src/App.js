@@ -16,9 +16,6 @@ class App extends React.Component {
     <div className="App">
       <MetaTags>
         <title>Bee Card Balance Checker</title>
-        <meta id="meta-description" name="description" content="Simple React website to check bee card balance." />
-        <meta id="og-title" property="og:title" content="MyApp" />
-        <meta id="og-image" property="og:image" content="path/to/image.jpg" />
       </MetaTags>
       <Router>
         <div className="App-header">
