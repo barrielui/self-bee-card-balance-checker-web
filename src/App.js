@@ -1,4 +1,5 @@
 import React from 'react';
+import MetaTags from 'react-meta-tags';
 import './App.css';
 import FormBody from './FormBody';
 import AboutBody from './AboutBody';
@@ -10,17 +11,19 @@ import {
 } from "react-router-dom";
 
 class App extends React.Component {
-  componentDidMount() {
-    document.title = "Bee Card Balance Checker"
-  }
-  
   render() {
     return (
-      <span className="App">
+    <div className="App">
+      <MetaTags>
+        <title>Bee Card Balance Checker</title>
+        <meta id="meta-description" name="description" content="Simple React website to check bee card balance." />
+        <meta id="og-title" property="og:title" content="MyApp" />
+        <meta id="og-image" property="og:image" content="path/to/image.jpg" />
+      </MetaTags>
       <Router>
-        <span className="App-header">
+        <div className="App-header">
           <h1> <Link to="/" className="App-title">Bee Card Balance Checker</Link></h1>
-        </span>
+        </div>
         
         <Switch>
           <Route exact path="/">
@@ -32,7 +35,7 @@ class App extends React.Component {
           </Route>
         </Switch>
         </Router>
-      </span>
+      </div>
       
     );
   }
