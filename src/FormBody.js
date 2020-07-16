@@ -1,13 +1,16 @@
 import React from 'react';
+import Cookies from 'universal-cookie';
 import './App.css';
 import {
   Link
 } from "react-router-dom";
 
+const cookies = new Cookies();
+
 class FormBody extends React.Component{
   constructor(props) {
     super(props);
-    this.state = {printedNumber: '', securityCode: ''};
+    this.state = {printedNumber: cookies.get('printedNumber'), securityCode: ''};
     
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,11 +21,7 @@ class FormBody extends React.Component{
   }
   
   handleSubmit(event) {
-    // console.log(this.state);
-    fetch('https://beecard.co.nz/Home/Balance', {
-      method: 'POST',
-      body: this.state,
-    });
+    cookies.set('printedNumber', this.state.printedNumber, { path: '/' });
   }
     
   render() {
@@ -34,7 +33,7 @@ class FormBody extends React.Component{
       
         <form 
           action="https://beecard.co.nz/Home/Balance" 
-          //onSubmit={this.handleSubmit}
+          onSubmit={this.handleSubmit}
           target="_blank"
           rel="noopener noreferrer"
           onChange={this.handleChange} 
