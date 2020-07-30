@@ -21,7 +21,7 @@ class FormBody extends React.Component{
   }
   
   handleSubmit(event) {
-    cookies.set('printedNumber', this.state.printedNumber, { path: '/' });
+    cookies.set('printedNumber', this.state.printedNumber, { path: '/' , expires: new Date(Date.now()+1209600), maxAge: 1209600});
   }
     
   render() {
